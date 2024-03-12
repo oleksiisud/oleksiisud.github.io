@@ -1,0 +1,179 @@
+.container {
+  height: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+h1.title {
+  text-align: center;
+  margin: 20px;
+  padding: 15px;
+  background-color: rgba(150, 150, 150, 0.3);
+  border-radius: 10px;
+}
+#menu {
+  margin: 20px;
+  background-color: rgba(150, 150, 150, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+}
+.checkmark {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  height: 40px;
+  width: 40px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.formGroup {
+  display: flex;
+}
+.newTaskLabel {
+  border-right: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(150, 150, 150, 1.0);
+  width: 7%;
+}
+.formControl {
+  padding-left: 10px;
+  padding: 5px;
+  border: 0px;
+  border-top: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(150, 150, 150, 1.0);
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+.task {
+  margin-bottom: 0px;
+  display: flex;
+}
+.priority-low {
+  background-color: rgba(63, 209, 68, 0.3);
+  flex-grow: 1;
+  word-break: break-all;
+  padding-left: 10px;
+  padding: 5px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(150, 150, 150, 1.0);
+}
+.priority-medium {
+  background-color: rgba(217, 193, 56, 0.3);
+  flex-grow: 1;
+  word-break: break-all;
+  padding-left: 10px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(150, 150, 150, 1.0);
+}
+.priority-high {
+  background-color: rgba(217, 56, 56, 0.3);
+  flex-grow: 1;
+  word-break: break-all;
+  padding-left: 10px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(150, 150, 150, 1.0);
+}
+.deleteButton {
+  border: 0;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(171, 46, 46, 1.0);
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 5px;
+}
+.primaryButton {
+  margin: 10px;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(50, 68, 168, 1.0);
+}
+.completed {
+  text-decoration: line-through;
+}
+.confetti {
+  width: 15px;
+  height: 15px;
+  background-color: #f2d74e;
+  position: absolute;
+  left: 50%;
+  animation: confetti 5s ease-in-out -2s infinite;
+  transform-origin: left top;
+}
+.confetti:nth-child(1) {
+  background-color: #f2d74e; left: 10%; animation-delay: 0;
+}
+.confetti:nth-child(2) {
+  background-color: #95c3de; left: 20%; animation-delay: -5s;
+}
+.confetti:nth-child(3) {
+  background-color: #ff9a91; left: 30%; animation-delay: -3s;
+}
+.confetti:nth-child(4) {
+  background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+}
+.confetti:nth-child(5) {
+  background-color: #95c3de; left: 50%; animation-delay: -4s;
+}
+.confetti:nth-child(6) {
+  background-color: #ff9a91; left: 60%; animation-delay: -6s;
+}
+.confetti:nth-child(7) {
+  background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+}
+.confetti:nth-child(8) {
+  background-color: #95c3de; left: 80%; animation-delay: -2s;
+}
+.confetti:nth-child(9) {
+  background-color: #ff9a91; left: 90%; animation-delay: -3.5s;
+}
+.confetti:nth-child(10) {
+  background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
+}
+
+@keyframes confetti {
+  0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+  25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+  50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+  75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+  100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+}
