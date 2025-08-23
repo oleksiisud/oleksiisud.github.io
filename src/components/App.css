@@ -1,0 +1,9 @@
+body {
+    margin: 0px;
+}
+.container {
+    display: flex;
+}
+.content {
+    flex-grow: 1;
+}
