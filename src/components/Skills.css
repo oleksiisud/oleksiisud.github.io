@@ -1,0 +1,68 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  padding: 1rem;
+}
+
+.skill-panel {
+  position: relative; 
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-panel:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.skill-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.skill-panel:hover .skill-logo {
+  transform: scale(1.1);
+}
+
+.skill-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)); /* Gradient for better text readability */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0; 
+  transition: opacity 0.4s ease-in-out;
+}
+
+.skill-panel:hover .skill-overlay {
+  opacity: 1;
+}
+
+.skill-overlay h3 {
+  margin: 0;
+  padding: 1rem;
+  color: var(--hover-text-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  transform: translateY(20px); 
+  transition: transform 0.3s ease 0.1s; 
+}
+
+.skill-panel:hover .skill-overlay h3 {
+  transform: translateY(0);
+}

@@ -61,7 +61,7 @@ const Sidebar: React.FC = () => {
           </ul>
 
           <div className="sidebar-footer">
-            <a href="/path-to-your-resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="https://docs.google.com/document/d/1vtFQIo25w2i3Sy2CbZG5HQkzRUrivlgVyAl9bW9XQm8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <FileTextFilled className="icon" />
                 {isOpen && <span className='text'>Resume</span>}
             </a>
