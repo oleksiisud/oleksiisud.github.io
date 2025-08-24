@@ -1,0 +1,27 @@
+.footer {
+  width: px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-sections, .footer-social {
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}

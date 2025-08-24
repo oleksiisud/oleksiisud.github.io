@@ -19,12 +19,11 @@ const Sidebar: React.FC = () => {
   }
 
   return (
-    <div className="sidebar-container">
-      <aside className={isOpen ? 'sidebar open' : 'sidebar'}>
-        <nav id="sidebar-nav">
-          <ul>
-            <li className="toggle-btn">
-              <a onClick={handleToggle} aria-expanded={isOpen} aria-controls="sidebar-nav">
+      <aside className={isOpen ? 'sidebar sidebar-open' : 'sidebar sidebar-closed'}>
+        <nav className='sidebar-flex'>
+          <ul className='sidebar-top'>
+            <li className='collapse-button'>
+              <a onClick={handleToggle} aria-expanded={isOpen}>
                 {isOpen ? <LeftOutlined className='icon'/> : <RightOutlined className='icon'/>}
               </a>
             </li>
@@ -69,7 +68,6 @@ const Sidebar: React.FC = () => {
           </div>
         </nav>
       </aside>
-    </div>
   )
 }
 

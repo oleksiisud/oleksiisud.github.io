@@ -4,7 +4,6 @@ function Footer() {
   return (
     <>
       <div className='footer'>
-        <hr />
         <div className='footer-sections'>
             <a href='#about'>About</a>
             <a href='#skills'>Skills</a>
