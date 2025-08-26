@@ -61,10 +61,14 @@ const Sidebar: React.FC = () => {
           </ul>
 
           <div className="sidebar-footer">
-            <a href="https://docs.google.com/document/d/1vtFQIo25w2i3Sy2CbZG5HQkzRUrivlgVyAl9bW9XQm8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <ul>
+              <li>
+                <a href="https://docs.google.com/document/d/1vtFQIo25w2i3Sy2CbZG5HQkzRUrivlgVyAl9bW9XQm8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <FileTextFilled className="icon" />
                 {isOpen && <span className='text'>Resume</span>}
             </a>
+              </li>
+            </ul>
           </div>
         </nav>
       </aside>

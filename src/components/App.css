@@ -24,7 +24,8 @@ body {
   display: flex;
 }
 .sidebar-space {
-    width: 3.5rem;
+  flex-shrink: 0;
+  width: 3.5rem;
 }
 .content {
   width: 100%;
@@ -37,8 +38,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
-  padding: 0 2rem;
+  min-height: 100vh;
   text-align: center;
   border-bottom: 1px solid var(--primary-color);
 }
