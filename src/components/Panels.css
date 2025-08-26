@@ -1,4 +1,4 @@
-.skills-grid {
+.panel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
@@ -6,35 +6,30 @@
   max-width: 900px;
   padding: 1rem;
 }
-
-.skill-panel {
-  position: relative; 
+.panel {
   aspect-ratio: 1 / 1;
-  border-radius: 12px;
+  border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
   background-color: var(--primary-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.skill-panel:hover {
+.panel:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
-
-.skill-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.panel-logo {
+  padding: 4%;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
   transition: transform 0.4s ease-in-out;
 }
-
-.skill-panel:hover .skill-logo {
+.panel:hover .panel-logo {
   transform: scale(1.1);
 }
-
-.skill-overlay {
+.panel-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,27 +37,42 @@
   height: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)); /* Gradient for better text readability */
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  opacity: 0; 
+  justify-content: end;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1; 
   transition: opacity 0.4s ease-in-out;
 }
-
-.skill-panel:hover .skill-overlay {
+.panel:hover .panel-overlay {
   opacity: 1;
 }
-
-.skill-overlay h3 {
+.panel-overlay h3 {
   margin: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   color: var(--hover-text-color);
   font-size: 1.25rem;
   font-weight: 700;
   text-align: center;
-  transform: translateY(20px); 
+  transform: translateY(20px);
   transition: transform 0.3s ease 0.1s; 
 }
-
-.skill-panel:hover .skill-overlay h3 {
+.panel-overlay p {
+  margin-top: 0;
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 0.75rem;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.1s; 
+}
+.panel:hover .panel-overlay h3 {
   transform: translateY(0);
+}
+.panel:hover .panel-overlay p {
+  transform: translateY(0);
+}
+
+/* Skills */
+
+.skills.panel {
+  aspect-ratio: 4 / 3;
 }
