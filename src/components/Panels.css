@@ -82,3 +82,12 @@
 .projects.panel {
   aspect-ratio: 16 / 9;
 }
+.projects.panel-logo {
+  padding: 3%;
+}
+.projects.panel-overlay a {
+  color: var(--text-color);
+}
+.projects.panel-overlay a:hover {
+  color: var(--hover-text-color);
+}

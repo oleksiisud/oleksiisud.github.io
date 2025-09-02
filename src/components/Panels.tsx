@@ -4,7 +4,7 @@ import './Panels.css'
 interface PanelItem {
   name: string
   imageUrl: string
-  desc?: string
+  desc?: React.ReactNode
 }
 
 interface PanelsProps {
@@ -29,7 +29,7 @@ const Panels: React.FC<PanelsProps> = ({ data, className }) => {
           />
           <div className={`panel-overlay ${className || ''}`}>
             <h3>{item.name}</h3>
-            {item.desc ? <p>{item.desc}</p> : <></>}
+            {item.desc ? item.desc : <></>}
           </div>
         </div>
       ))}

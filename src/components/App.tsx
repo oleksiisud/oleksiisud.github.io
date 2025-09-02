@@ -16,7 +16,16 @@ const skillsData = [
 ]
 
 const projectsData = [
-  { name: 'Trackify', imageUrl: 'src/assets/trackify_screenshot.png', desc: '<GlobalOutlined />: https://trackify-3140.web.app/\n<GithubFilled />'}
+  { name: 'InterTech', 
+    imageUrl: 'src/assets/intertech_screenshot.png', 
+    desc: (<p><a href="https://devpost.com/software/intertech?ref_content=my-projects-tab&ref_feature=my_projects" target="_blank"><GlobalOutlined />: https://devpost.com/software/intertech?ref_content=my-projects-tab&ref_feature=my_projects</a>
+    <br />
+    <a href="https://github.com/birongliu/CTP-Hackathon" target="_blank"><GithubFilled />: https://github.com/birongliu/CTP-Hackathon</a></p>)},
+  { name: 'Trackify', 
+    imageUrl: 'src/assets/trackify_screenshot.png', 
+    desc: (<p><a href="https://trackify-3140.web.app/" target="_blank"><GlobalOutlined />: https://trackify-3140.web.app/</a>
+    <br />
+    <a href="https://github.com/mariiaonokhina/trackify" target="_blank"><GithubFilled />: https://github.com/mariiaonokhina/trackify</a></p>)}
 ]
 
 function App() {
